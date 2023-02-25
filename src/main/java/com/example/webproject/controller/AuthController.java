@@ -40,7 +40,7 @@ public class AuthController {
         userService.saveUser(user);
         return "redirect:/register?success";
     }
-    @GetMapping("users")
+    @GetMapping("/users")
     public String users(Model model){
         List<Users> users = userService.findAllUsers();
         model.addAttribute("users", users);
